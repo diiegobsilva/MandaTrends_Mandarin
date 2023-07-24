@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+.container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-container img {
+    width: 100vw; /* Tornar a largura da imagem responsiva */
+    max-width: 950px; /* Definir uma largura máxima para a imagem */
+    height: auto;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nrf-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.nrf-titulo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nrf-subtitulo {
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #565656;
+}
+
+.text-fonte {
+    padding-top: 10px;
+    font-size: 15px;
+    color: #a9a9a9;
+}
+
+.linha-horizontal,
+.linha-horizontal-left,
+.linha-horizontal-right {
+    height: 8px;
+    border-radius: 1px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.linha-horizontal {
+    width: 49%;
+    background-image: linear-gradient(to right, #883b44, #b4869d, #56258d);
+}
+
+.linha-horizontal-left {
+    width: 60%;
+    background-image: linear-gradient(to right, #4bc1e6, #8fa2c5, #56258d);
+}
+
+.linha-horizontal-right {
+    width: 60%;
+    background-image: linear-gradient(to right, #00ccff, #18c0aa, #499185);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.col-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-menor {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.left-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 10px;
+}
+
+.right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.imagem {
+    width: 100%;
+    height: auto;
+}
+
+.rodape-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape-container img {
+    width: 100vw;
+    max-width: 950px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.texto-rodape {
+    font-size: 16px;
+    color: #565656;
+    margin: 0;
+}
+
+.texto-rodape a {
+    color: #565656;
+}
+
+.texto-rodape a:hover {
+    color: #ff0000;
+}
+
+/* Media Queries */
+
+/* Tablets e Dispositivos de Tela Menor */
+@media (max-width: 768px) {
+    .nav-container img {
+        width: 80%;
+    }
+
+    .linha-horizontal,
+    .linha-horizontal-left,
+    .linha-horizontal-right {
+        width: 80%;
+    }
+
+    .col-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-container,
+    .right-container {
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+/* Dispositivos de Tela Ainda Menor */
+@media (max-width: 576px) {
+    .nav-container img {
+        width: 100%;
+    }
+
+    .linha-horizontal,
+    .linha-horizontal-left,
+    .linha-horizontal-right {
+        width: 100%;
+    }
+}
