@@ -1,9 +1,11 @@
+/* Estilos Globais */
 body {
     margin: 0;
     padding: 0;
     font-family: "Roboto";
 }
 
+/* Container Principal */
 .container {
     margin-top: 30px;
     display: flex;
@@ -13,6 +15,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Barra de Navegação */
 .nav-container {
     width: 100%;
     display: flex;
@@ -20,11 +23,12 @@ body {
 }
 
 .nav-container img {
-    width: 100vw; /* Tornar a largura da imagem responsiva */
-    max-width: 950px; /* Definir uma largura máxima para a imagem */
+    width: 100vw;
+    max-width: 950px;
     height: auto;
 }
 
+/* Formulário e Conteúdo */
 .form-container {
     width: 100%;
     display: flex;
@@ -33,30 +37,71 @@ body {
     align-items: center;
 }
 
-.nrf-container img {
+.form-container img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
 
+/* Estilos para Títulos e Textos */
 .nrf-titulo {
     font-size: 30px;
     font-weight: bold;
     margin: 0;
 }
 
-.nrf-subtitulo {
+.nrf-subtitulo,
+.text-fonte {
     margin: 8px 0 10px 0;
     font-size: 18px;
     color: #565656;
 }
 
-.text-fonte {
-    margin: 0;
-    font-size: 15px;
-    color: #a9a9a9;
+/* Linhas Horizontais */
+.linha-horizontal,
+.linha-horizontal-left,
+.linha-horizontal-right {
+    height: 8px;
+    border-radius: 1px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
+.linha-horizontal {
+    width: 49%;
+    background-image: linear-gradient(to right, #883b44, #b4869d, #56258d);
+}
+
+/* ... Outras Linhas Horizontais ... */
+
+/* Colunas */
+.col-container {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Títulos Menores */
+.titulo-menor {
+    font-size: 25px;
+    font-weight: bold;
+    max-width: 100%;
+    margin: 8px 0px 10px 0;
+}
+
+/* Left Container */
+.left-container,
+.right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px; /* Padding simétrico para left e right containers */
+}
+
+/* Linhas Horizontais */
 .linha-horizontal,
 .linha-horizontal-left,
 .linha-horizontal-right {
@@ -84,38 +129,7 @@ body {
     justify-content: flex-start;
 }
 
-.col-container {
-    max-width: 850px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.titulo-menor {
-    font-size: 25px;
-    font-weight: bold;
-    max-width: 100%; 
-    margin: 8px 0px 10px 0; 
-}
-
-.left-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-right: 10px;
-}
-
-.right-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-left: 10px;
-}
-
-
+/* Rodapé */
 .rodape-container {
     width: 100%;
     display: flex;
@@ -126,7 +140,7 @@ body {
 
 .rodape-container img {
     width: 100vw;
-    max-width: 950px; 
+    max-width: 950px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -146,5 +160,111 @@ body {
 }
 
 /* Media Queries */
-
 /* Tablets e Dispositivos de Tela Menor */
+@media (max-width: 1366px) {
+    .nav-container img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-container img {
+        max-width: 95%;
+    }
+    .left-container{
+        max-width: 40%;
+        margin-left: 60px;
+    }
+    .right-container {
+        max-width: 40%;
+        margin-right: 60px;
+    }
+    .nrf-titulo {
+        font-size: 28px;
+    }
+    .nrf-subtitulo {
+        font-size: 16px;
+    }
+    .titulo-menor {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container img {
+        max-width: 100%;
+    }
+    .col-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .left-container{
+        max-width: 40%;
+        margin-left: 60px;
+    }
+    .right-container {
+        max-width: 40%;
+        margin-right: 60px;
+    }
+    .nrf-titulo {
+        margin-right: 30px;
+        font-size: 24px;
+    }
+    .nrf-subtitulo {
+        font-size: 14px;
+        margin-right: 30px;
+    }
+    .titulo-menor {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container img {
+        max-width: 100%;
+    }
+    .form-container {
+        width: 90%;
+    }
+    .col-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-container {
+        max-width: 100%;
+        margin: 0; 
+    }
+    .right-container {
+        max-width: 100%;
+        margin: 0; 
+
+    }   
+    .imagem-nba,
+    .imagem-whats {
+        max-width: 100%; 
+        height: auto; 
+    }
+    .nrf-titulo {
+        font-size: 20px;
+    }
+    .text-fonte {
+        font-size: 11px;
+        color: #a9a9a9;
+    }
+    .texto-rodape {
+        font-size: 11px;
+        color: #565656;
+        margin: 0;
+    }
+    .nrf-subtitulo {
+        font-size: 12px;
+    }
+    .titulo-menor {
+        font-size: 12px;
+    }
+    .rodape-container img {
+        max-width: 100%;
+    }
+}
